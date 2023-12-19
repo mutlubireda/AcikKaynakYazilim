@@ -1,0 +1,11 @@
+[Unit]
+Description=Örnek bir sunucu
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/proje
+ExecStart=/usr/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
