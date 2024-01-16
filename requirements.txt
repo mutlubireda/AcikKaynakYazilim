@@ -1,0 +1,5 @@
+Flask-RESTful
+pandas
+requests
+sqlalchemy
+flask_sqlalchemy
